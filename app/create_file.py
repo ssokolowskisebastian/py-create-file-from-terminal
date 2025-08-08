@@ -41,7 +41,7 @@ def create_directory(parts: list[str]) -> str:
 
 if __name__ == "__main__":
     res = parse_args(sys.argv[1:])
+    path = create_directory(res["-d"])
     if res["-f"][0]:
         file_name = res["-f"][0]
-    path = create_directory(res["-d"])
-    write_to_file(path, file_name)
+        write_to_file(path, file_name)
